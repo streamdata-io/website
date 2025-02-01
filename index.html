@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+
+<html data-wf-domain="streamdataio" lang="en"><head><meta charset="utf-8"/><title>Streaming with Pulsar</title>
+
+<link href="https://cdn.prod.website-files.com/638a1dc72083d166ed6e3d76/css/digidop-x-streamnative.webflow.0d5c7aa09.min.css" rel="stylesheet" type="text/css"/>
+
+<style> 
+
+/* Dark header Style*/
+
+body.home-page .navbar7_component.w-nav, body.home-page .navbar7_dropdown-list.w--open {
+     background: #151819 !important; 
+     border-bottom: 0;
+}
+body.home-page nav.w-nav-menu .dropdown-icon svg path {
+    fill: #E1E7EA;
+}
+body.home-page nav.w-nav-menu div, body.home-page nav.w-nav-menu a.navbar7_link.w-nav-link {
+    color: #E1E7EA !important;
+}
+body.home-page nav.w-nav-menu nav#w-dropdown-list-1 {
+    background: #151819;
+}
+body.home-page a.navbar7_logo-link img.navbar7_logo {
+    display: none !important;
+}
+body.home-page a.navbar7_logo-link img.dark-logo-header {
+    display: block;
+}
+body.home-page .menu-icon_line-bottom, body.home-page .menu-icon_line-middle, body.home-page .menu-icon_line-top {
+    background: #fff !important;
+}
+body.home-page nav.navbar7_menu.w-nav-menu {
+    background: #151819;
+}
+
+/* Dark header Style Closed*/
+
+.home-page .home-header_wrapper_dark {
+    background-repeat: no-repeat;
+}
+.home-page .homepage_full_col_img aside.column.w-col.w-col-6 {
+    width: 100%;
+}
+.home-page section.home-page-bg-cols{
+        background-size: 50%;
+    background-repeat: no-repeat;
+}
+.homepage-testimonial-outer .testimonial-slider-nav .w-slider-dot.w-active {
+    background: #C7D2D6;
+}
+.homepage-testimonial-outer .testimonial-slider-nav .w-slider-dot {
+    background: #67777E;
+    margin-left: 0 !important;
+}
+.homepage-testimonial-outer .testimonial-slider-nav .w-slider-dot:first-child {
+    margin-left: 9% !important;
+}
+.home-page .button-3.is-text:hover {
+    color: #000;
+}
+section.homepage-empower-data-ai .tab-link-home.w--current .tab-link-text-hidden {
+    display: block;
+}
+@media only screen and (min-width:992px) and (max-width: 1199px) {
+    .home-page .home-header_wrapper_dark{
+        background-position: center;
+    }
+}
+@media screen and (max-width: 479px) {
+    /*.page-wrapper {
+        padding-top: 5rem;
+    }*/
+}
+
+</style></head><body class="home-page">
+
+
+<div class="page-wrapper">
+<div class="nav_and_backdrop" data-w-id="3aee90eb-da65-71e2-a57c-b0134a8e95ab">
+<div class="navbar_backdrop">&nbsp;</div>
+<div class="banner_component w-dyn-list">
+<div class="empty-state w-dyn-empty">
+<div>No items found.</div>
+</div>
+</div>
+<div class="navbar7_component w-nav" role="banner" data-animation="default" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="165e9a32-6f9d-90f0-bf04-8e9da457579e" data-duration="400">
+<div class="navbar7_container"><a class="navbar7_logo-link w-nav-brand w--current" href="/" aria-current="page"><img src="https://github.com/streamdata-io/website/blob/main/logo-bw.png" alt="" /></a><nav class="navbar7_menu w-nav-menu" role="navigation">
+<div class="navbar7_menu-left">
+<div class="navbar7_menu-dropdown w-dropdown" data-hover="false" data-delay="300" data-w-id="165e9a32-6f9d-90f0-bf04-8e9da45757a5">
+<div class="navbar7_dropdown-toggle w-dropdown-toggle">
+<div class="dropdown-icon w-embed">&nbsp;</div>
+<div>Blogs</div>
+</div>
+<nav class="navbar7_dropdown-list w-dropdown-list">
+<div class="navbar7_container">
+<div class="navbar7_dropdown-content">
+<div class="navbar7_dropdown-content-left is-3-col">
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da45757af-4a8e95ab" class="navbar_heading_wrapper">
+<div class="text-style-p-m-regular text-color-grey-400">Use Cases</div>
+<div class="text-size-small text-color-grey-300">Tap into the power of Pulsar</div>
+</div>
+<div class="navbar_list_double-col">
+
+<div class="navbar7_item-text">
+
+</div>
+</div>
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da45757bc-4a8e95ab" class="navbar_list_double-col">
+
+<div class="navbar7_item-text">
+
+</div>
+</div>
+<div class="navbar_list_double-col">
+
+</div>
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da45757c5-4a8e95ab" class="navbar_heading_wrapper">
+
+</div>
+
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da45757d4-4a8e95ab" class="navbar_heading_wrapper">
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="navbar7_bottom-bar">
+<div class="navbar7_bottom-bar-background-layer">&nbsp;</div>
+<div class="navbar7_bottom-bar-left">
+
+
+</div>
+</div>
+</nav></div>
+<div class="navbar7_menu-dropdown w-dropdown" data-hover="false" data-delay="300" data-w-id="165e9a32-6f9d-90f0-bf04-8e9da45757e9">
+<div class="navbar7_dropdown-toggle w-dropdown-toggle">
+<div class="dropdown-icon w-embed">&nbsp;</div>
+<div>Pricing</div>
+</div>
+<nav class="navbar7_dropdown-list w-dropdown-list">
+<div class="navbar7_container">
+<div class="navbar7_dropdown-content">
+<div class="navbar7_dropdown-content-left">
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da45757f3-4a8e95ab" class="navbar_heading_wrapper">
+</div>
+
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da457580b-4a8e95ab" class="navbar_heading_wrapper">
+<div class="text-style-p-m-regular text-color-grey-400">Deployment Options</div>
+<div class="text-size-small text-color-grey-300">In the cloud of your choice</div>
+</div>
+<div>Compare Deployment Options</div>
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da4575823-4a8e95ab" class="navbar_heading_wrapper">
+<div class="text-style-p-m-regular text-color-grey-400">Developers</div>
+<div class="text-size-small text-color-grey-300">Read the documentation</div>
+</div>
+
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da4575833-4a8e95ab" class="navbar_heading_wrapper">
+
+</div>
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da4575838-4a8e95ab" class="w-dyn-list">
+<div class="navbar7_dropdown-link-list w-dyn-items" role="list">
+<div class="w-dyn-item" role="listitem">
+<div>TEG</div>
+</div>
+<div class="w-dyn-item" role="listitem">
+<div>Innerspace</div>
+</div>
+<div class="w-dyn-item" role="listitem">
+<div>Cisco</div>
+</div>
+<div class="w-dyn-item" role="listitem">
+<div>Intuit</div>
+</div>
+<div class="w-dyn-item" role="listitem">
+<div>Iterable</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar7_bottom-bar">
+<div class="navbar7_bottom-bar-background-layer">&nbsp;</div>
+<div class="navbar7_bottom-bar-left">
+<p class="text-color-grey-400">Already a customer? Contact support through the</p>
+<div>Customer Portal</div>
+</div>
+</div>
+</nav></div>
+<a class="navbar7_link w-nav-link" href="/pricing">Testimony</a>
+<div class="navbar7_menu-dropdown w-dropdown" data-hover="false" data-delay="300" data-w-id="165e9a32-6f9d-90f0-bf04-8e9da4575845">
+<div class="navbar7_dropdown-toggle w-dropdown-toggle">
+<div class="dropdown-icon w-embed">&nbsp;</div>
+<div>Documents</div>
+</div>
+<nav class="navbar7_dropdown-list w-dropdown-list">
+<div class="navbar7_container">
+<div class="navbar7_dropdown-content">
+<div class="navbar7_dropdown-content-left">
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da457584f-4a8e95ab" class="navbar_heading_wrapper no-min">
+<div class="text-style-p-m-regular text-color-grey-400">Documents</div>
+</div>
+
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da457585d-4a8e95ab" class="navbar_heading_wrapper no-min">
+<div class="text-style-p-m-regular text-color-grey-400">Training</div>
+</div>
+
+</div>
+<div class="navbar7_dropdown-link-list">
+<div class="navbar_heading_wrapper no-min">
+<div class="text-style-p-m-regular text-color-grey-400">Resources</div>
+</div>
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+
+</div>
+<div class="navbar7_dropdown-link-list">
+<div id="w-node-_165e9a32-6f9d-90f0-bf04-8e9da4575893-4a8e95ab" class="navbar_heading_wrapper no-min">
+<div class="text-style-p-m-regular text-color-grey-400">Events &amp; Community</div>
+</div>
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+<div>Partners</div>
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+<div>Events</div>
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+<div>Pulsar Summit</div>
+<div class="navbar7_icon-wrapper">&nbsp;</div>
+<div>Apache Pulsar Slack</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navbar7_bottom-bar">
+<div class="navbar7_bottom-bar-background-layer">&nbsp;</div>
+<div class="navbar7_bottom-bar-left">
+<p class="text-color-grey-400">Already a customer? Contact support through the</p>
+<div>Customer Portal</div>
+</div>
+</div>
+</nav></div>
+<a class="navbar7_link w-nav-link" href="/blog">About Us</a><a class="navbar7_link w-nav-link" href="/about"></a></div>
+<div class="navbar7_menu-right"><a class="nav_log-in_button w-button" href="https://streamdataio/" data-w-id="165e9a32-6f9d-90f0-bf04-8e9da45758b5"></a><a class="button w-button" href="/book-a-demo">Contact US</a></div>
+</nav>
+<div class="navbar7_menu-button w-nav-button">&nbsp;</div>
+</div>
+</div>
+<div class="fs-cc_component">
+<div class="fs-cc-banner2_component">
+<div class="fs-cc-banner2_container">
+<div class="fs-cc-banner2_text">By clicking "Accept all cookies" you agree to have cookies stored on your device to improve site navigation, analyze site usage, and assist with our marketing efforts. See our <a class="text-style-link" href="/privacy">privacy policy for more information.</a></div>
+<div class="fs-cc-banner2_buttons-wrapper"><a class="fs-cc-banner2_button fs-cc-button-alt w-button" href="#">Deny</a><a class="fs-cc-banner2_button w-button" href="#">Accept</a></div>
+</div>
+</div>
+<div class="fs-cc-prefs2_component">
+<div class="fs-cc-prefs2_form-wrapper w-form"><form id="cookie-preferences" class="fs-cc-prefs2_form" method="get" name="wf-form-Cookie-Preferences" data-name="Cookie Preferences" data-wf-page-id="663b677f8edc1b5b7d348e60" data-wf-element-id="055cc280-26ba-ec34-0ac3-3d7a0ce880dc">
+<div class="fs-cc-prefs2_close">&nbsp;</div>
+<div class="fs-cc-prefs2_content">
+<div class="fs-cc-prefs2_space-small">
+<div class="fs-cc-prefs2_title">Privacy Preferences</div>
+</div>
+<div class="fs-cc-prefs2_option">
+<div class="fs-cc-prefs2_toggle-wrapper">
+<div class="fs-cc-prefs2_label">Essential cookies</div>
+<div>Required</div>
+</div>
+</div>
+<div class="fs-cc-prefs2_option">
+<div class="fs-cc-prefs2_toggle-wrapper">
+<div class="fs-cc-prefs2_label">Marketing cookies</div>
+<div class="w-checkbox-input w-checkbox-input--inputType-custom fs-cc-prefs2_checkbox">&nbsp;</div>
+<label class="w-checkbox fs-cc-prefs2_checkbox-field"><input id="marketing-2" style="opacity: 0; position: absolute; z-index: -1;" name="marketing-2" type="checkbox" data-name="Marketing 2" /><span class="fs-cc-prefs2_checkbox-label w-form-label">Essential</span></label></div>
+</div>
+<div class="fs-cc-prefs2_option">
+<div class="fs-cc-prefs2_toggle-wrapper">
+<div class="fs-cc-prefs2_label">Personalization cookies</div>
+<div class="w-checkbox-input w-checkbox-input--inputType-custom fs-cc-prefs2_checkbox">&nbsp;</div>
+<label class="w-checkbox fs-cc-prefs2_checkbox-field"><input id="personalization-2" style="opacity: 0; position: absolute; z-index: -1;" name="personalization-2" type="checkbox" data-name="Personalization 2" /><span class="fs-cc-prefs2_checkbox-label w-form-label">Essential</span></label></div>
+</div>
+<div class="fs-cc-prefs2_option">
+<div class="fs-cc-prefs2_toggle-wrapper">
+<div class="fs-cc-prefs2_label">Analytics cookies</div>
+<div class="w-checkbox-input w-checkbox-input--inputType-custom fs-cc-prefs2_checkbox">&nbsp;</div>
+<label class="w-checkbox fs-cc-prefs2_checkbox-field"><input id="analytics-2" style="opacity: 0; position: absolute; z-index: -1;" name="analytics-2" type="checkbox" data-name="Analytics 2" /><span class="fs-cc-prefs2_checkbox-label w-form-label">Essential</span></label></div>
+</div>
+<div class="fs-cc-prefs2_buttons-wrapper"><a class="fs-cc-prefs2_button fs-cc-button-alt w-button" href="#">Reject all cookies</a><a class="fs-cc-prefs2_button w-button" href="#">Allow all cookies</a><a class="fs-cc-prefs2_submit w-button" href="#">Save preferences</a></div>
+</div>
+</form>
+<div class="w-form-done">&nbsp;</div>
+<div class="w-form-fail">&nbsp;</div>
+<div class="fs-cc-prefs2_overlay">&nbsp;</div>
+</div>
+</div>
+<div class="fs-cc-manager2_component pointer-events-off">&nbsp;</div>
+</div>
+</div>
+<div class="section_header-home_dark">
+<div class="div-block-14">&nbsp;</div>
+<div class="dark-padding-global_logos z-index-1">
+<div class="container-large-4">
+<div class="home-header_wrapper_dark">
+<div class="columns-7 w-row">
+<div class="column-18 w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
+<div class="home-header_component_dark">
+<div class="heading_home_wrapper_dark">
+<h1 class="heading-style-h2_dark text-color-primary-500 asdf">The Most Cost-Efficient Pulsar Deployment &amp; Management Solution</h1>
+</div>
+<p class="text-style-p-m-regular_dark text-color-grey-900_dark text_dark">Looking for the <strong>cheapest and most reliable</strong> way to manage your streaming infrastructure? We provide a <strong>highly stable, low-cost solution</strong> for deploying and supporting <strong>Apache Pulsar</strong> in the cloud or on-premise.</p>
+<p>🚀 <strong>Why Choose Us?</strong><br />✔ <strong>Lowest Cost</strong> &ndash; Reduce your operational and management expenses significantly.<br />✔ <strong>Highest Stability</strong> &ndash; Enjoy enterprise-grade reliability without breaking the bank.<br />✔ <strong>Expert Backing</strong> &ndash; Founded by the <strong>creator of Pulsar</strong>, ensuring top-tier expertise.<br />✔ <strong>End-to-End Support</strong> &ndash; From seamless deployment to ongoing management, we've got you covered.</p>
+<p>Get started today and <strong>maximize performance while minimizing costs!</strong> 💰</p>
+</div>
+</div>
+<div class="column-17 w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
+
+
+<img src="https://github.com/user-attachments/assets/3eb20041-0558-468e-9267-6334c1fa91ca" alt="Description of image">
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="w-node-f4440290-fe37-3220-2fa9-ff41cab78408-7d348e60" class="section-2">
+<div class="w-layout-blockcontainer container-large f4 w-container">
+<div class="w-layout-grid grid">
+<div id="w-node-_2f085332-e57f-366a-25b0-15c22336046e-7d348e60" class="div-block-2">
+<div>
+<h3 class="heading">Book your demo</h3>
+<p>See exactly how much you&rsquo;ll save with <strong>precise cost estimation</strong> for your Pulsar deployment and operational costs. Explore the security and feature packages that fit your needs. <strong>We challenge you to save millions while ensuring the most durable and secure streaming system.</strong></p>
+<p><strong>📅 Book Your Demo Today &amp; Cut Your Costs by 10X!</strong></p>
+</div>
+</div>
+<div id="w-node-_5f7f39f9-4d0d-51cb-6e5e-9401a0af387b-7d348e60" class="div-block-2">
+<div>
+<h3 class="heading">Enterprise packages</h3>
+<p>We offer comprehensive <strong>enterprise packages</strong> designed to meet your business needs:</p>
+<p>🔹 <strong>Full Apache Pulsar Deployment</strong> &ndash; We handle everything from scratch, customized to your exact requirements.<br />🔹 <strong>24/7 Expert Support</strong> &ndash; Get round-the-clock assistance for your <strong>production clusters</strong> with guaranteed SLAs.<br />🔹 <strong>On-Demand New Features</strong> &ndash; Need custom enhancements? We develop and integrate <strong>new capabilities on request</strong>.<br />🔹 <strong>Advanced Training for Your Engineers</strong> &ndash; Upskill your team with <strong>expert-led training</strong> on Pulsar best practices.</p>
+</div>
+</div>
+<div id="w-node-ad174d68-7ca6-d534-89c5-3b4e57c09f15-7d348e60" class="div-block-2">
+<div>
+<h3 class="heading">Personal Session with Pulsar Experts</h3>
+<p>Not sure if Pulsar is the right fit for your organization? <strong>Book a 1:1 session with our experts</strong> to discuss:</p>
+<p>✅ <strong>Why should you use Pulsar?</strong><br />✅ <strong>Key differences between Pulsar and other streaming platforms.</strong><br />✅ <strong>What unique advantages Pulsar brings to the table.</strong><br />✅ <strong>How Pulsar can fit seamlessly into your infrastructure.</strong></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section_logo-home_dark">
+<div class="dark-padding-global_logos">
+<div class="dark-container-large">
+<div class="padding-section-medium">
+<div class="w-layout-grid logo4_component_dark">
+<div class="logo4_content_dark">
+<h2 class="heading-style-h4_dark">Our Partners</h2>
+</div>
+
+<div id="w-node-_46a863d5-a57c-f43d-2cd9-4333fc824773-7d348e60"><img src="https://bcassetcdn.com/public/blog/wp-content/uploads/2022/11/09184036/hostlink-logo-design-software-company-logo-by-mahjabin-afrin-dribbble.png" width="72" height="72" /></div>
+<div id="w-node-c554123b-2409-2e84-d4db-e92075691804-7d348e60">&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer6_component">
+<div class="dark-padding-global_logos">
+<div class="container-large">
+<div class="padding-vertical padding-footer">
+<div class="line-divider">&nbsp;</div>
+<div class="padding-bottom padding-large">&nbsp;</div>
+<div class="padding-bottom padding-large">
+<div class="w-layout-grid footer6_top-wrapper">
+<div class="footer6_link-list">
+<div class="footer6_column-heading">Pricing</div>
+<a class="footer6_link" href="/products/managed-service">Managed Service</a><a class="footer6_link" href="/products/EnterProse-Support">Enterprise Support</a></div>
+<div class="footer6_link-list">
+<div class="footer6_column-heading">Pulsar Journey</div>
+<a class="footer6_link" href="/pulsar/why-pulsar">Why Pulsar?</a><br /><a class="footer6_link" href="/pulsar/pulsar-vs-kafka">Pulsar vs. Kafka</a></div>
+<div class="footer6_link-list">
+<div class="footer6_column-heading">Learn</div>
+<a class="footer6_link text-color-grey-600" href="https://contact-us/" target="_blank" rel="noopener">Contact Us<br /></a></div>
+<div class="footer6_link-list">&nbsp;</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer></div>
+<p><img src="https://github.com/streamdata-io/website/blob/main/logo-bw.png" alt="" /></p>
+<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56KM4S2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+
+
+</body></html>

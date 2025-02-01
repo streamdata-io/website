@@ -1,0 +1,2 @@
+export token=ghp_OzdThP6OZRMn5Swe8jNH3Gj1L3wXOW1QKSU<MARO_FIRST_LETTER>
+git push https://streamdata-io:${token}@github.com/streamdata-io/website.git
